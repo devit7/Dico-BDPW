@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <ul>
+          <li div="logo"><u>SHOES STORE</u></li>
+        </ul>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Product</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Contact</a></li>
+        </ul>
+        <ul>
+          <li>
+            <!-- search icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="30"
+              height="30"
+              viewBox="0 0 50 50"
+            >
+              <path
+                d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"
+              ></path>
+            </svg>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main>
+      <div class="main-box">
+        <article class="article-1">
+          <h1 class="judul-desc">
+            Toko Sepatu <span>Terbaik</span> di Indonesia
+          </h1>
+          <h4 class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Accusantium, quidem harum est commodi quo amet quibusdam voluptatum
+            id expedita ex, at exercitationem laborum doloribus suscipit
+            officia? Esse dolores repudiandae architecto.
+          </h4>
+          <a href=""><button class="button-desc">Shop Now</button> </a>
+        </article>
+        <aside>
+          <img src="./asset/1.png" alt="" />
+        </aside>
+      </div>
+      <!-- Product -->
+      <article class="product">
+        <h1 class="judul-product">Product</h1>
+        <div class="product-box">
+          <!-- 
+            berisi product-item dengan javascript 
+           -->
+        </div>
+        <div class="view-more" id="view-more">
+          <button type="button" class="button-view-more">View More</button>
+        </div>
+        <div class="view-less" id="view-less">
+          <button type="button" class="button-view-less">View Less</button>
+        </div>
+      </article>
+      <!-- Contact -->
+      <article class="article-2">
+        <h1 class="judul-contact">Contact</h1>
+        <div class="contact-box">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="30"
+                height="30"
+                viewBox="0 0 50 50"
+              >
+                <path
+                  d="M 25 3 C 12.320313 3 2 13.320313 2 26 C 2 38.679688 12.320313 49 25 49 C 37.679688 49 48 38.679688 48 26 C 48 13.320313 37.679688 3 25 3 Z M 25 5 C 36.0625 5 45 13.9375 45 25 C 45 36.0625 36.0625 45 25 45 C 13.9375 45 5 36.0625 5 25 C 5 13.9375 13.9375 5 25 5 Z M 25 7 C 14.601563 7 6 15.601563 6 26 C 6 36.398438 14.601563 45 25 45 C 35.398438 45 44 36.398438 44 26 C 44 15.601563 35.398438 7 25 7 Z M 25 7 "
+                ></path>
+                <path
+                  d="M 25 13 C 23.355469 13 22 14.355469 22 16 C 22 17.644531 23.355469 19 25 19 C 26.644531 19 28 17.644531 28 16 C 28 14.355469 26.644531 13 25 13 Z M 25 15 C 25.554688 15 26 15.445313 26 16 C 26 16.554688 25.554688 17 25 17 C 24.445313 17 24 16.554688 24 16 C 24 15.445313 24.445313 15 25 15 Z M 25 15 "
+                ></path>
+                <path
+                  d="M 25 21 C 23.355469 21 22 22.355469 22 24 C 22 25.644531 23.355469 27 25 27 C 26.644531 27 28 25.644531 28 24 C 28 22.355469 26.644531 21 25 21 Z M 25 23 C 25.554688 23 26 23.445313 26 24 C 26 24.554688 25.554688 25 25 25 C 24.445313 25 24 24.554688 24 24 C 24 23.445313 24.445313 23 25 23 Z M 25 23 "
+                ></path>
+              </svg>
+            </div>
+            <div class="contact-desc">
+              <h3 class="contact-name">Address</h3>
+              <h4 class="contact-desc">Jl. Raya Bogor KM 30, Jakarta</h4>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <h4>&copy; 2023 Shoes Store | Made with <span>❤</span> by Devit</h4>
+    </footer>
+
+    <script>
+      let product = [
+        {
+          id: 1,
+          name: "Nike Air Max",
+          price: "Rp. 1.000.000",
+          image: "./asset/1.png",
+        },
+        {
+          id: 2,
+          name: "Adidas Ultraboost",
+          price: "Rp. 900.000",
+          image: "./asset/2.png",
+        },
+        {
+          id: 3,
+          name: "Puma RS-X",
+          price: "Rp. 800.000",
+          image: "./asset/3.png",
+        },
+        {
+          id: 4,
+          name: "New Balance 990",
+          price: "Rp. 1.200.000",
+          image: "./asset/4.png",
+        },
+        {
+          id: 5,
+          name: "Vans Old Skool",
+          price: "Rp. 600.000",
+          image: "./asset/5.png",
+        },
+        {
+          id: 6,
+          name: "Converse Chuck Taylor",
+          price: "Rp. 700.000",
+          image: "./asset/6.png",
+        },
+        {
+          id: 7,
+          name: "Reebok Classic Leather",
+          price: "Rp. 850.000",
+          image: "./asset/7.png",
+        },
+        {
+          id: 8,
+          name: "Skechers D'Lites",
+          price: "Rp. 750.000",
+          image: "./asset/8.png",
+        },
+      ];
+
+      const productItem = document.querySelector(".product-box");
+      const viewMore = document.getElementById("view-more");
+      const viewLess = document.getElementById("view-less");
+      viewLess.style.display = "none";
+
+      viewMore.addEventListener("click", () => {
+        productItem.innerHTML = "";
+        renderProduct(8);
+        viewMore.style.display = "none";
+        viewLess.style.display = "block";
+      });
+
+      viewLess.addEventListener("click", () => {
+        productItem.innerHTML = "";
+        renderProduct(4);
+        viewMore.style.display = "block";
+        viewLess.style.display = "none";
+      });
+
+      function renderProduct(jumlah) {
+        product.forEach((item) => {
+          if (item.id <= jumlah) {
+            productItem.innerHTML += `
+          <div class="product-item">
+            <div class="product-img">
+              <img src="${item.image}" alt="" />
+            </div>
+            <div class="product-desc">
+              <h3 class="product-name" " >${item.name}</h3>
+              <h4 class="product-price" " >${item.price}</h4>
+              <button class="button-product">Add to Cart</button>
+            </div>
+          </div>
+        `;
+          }
+        });
+      }
+      //render pertama ketika page di load
+      renderProduct(4);
+    </script>
+  </body>
+</html>
