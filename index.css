@@ -2,14 +2,15 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
-nav{
+nav {
     width: 100%;
-    padding: 15px 13%;
+    padding: 15px 5%;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 100;
     display: flex;
     justify-content: space-between;
@@ -73,12 +74,42 @@ nav ul li a:hover{
     padding: 10px 15px;
 
 }
+/* Navbar Responsive */
 
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .search {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
+
+/* Navbar Responsive Mobile */
+
+@media (max-width: 425px) {
+    nav {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+}
 
 /* body main */
 main{
     width: 100%;
-    height: 100vh;
     background-color: #fff;
     margin-top: 80px;
     box-sizing: border-box;
@@ -140,6 +171,41 @@ aside{
     background-color: #fff;
     color: #172554;
     border: 1px solid #172554;
+}
+
+/* Main Responsive */
+
+@media (max-width: 768px) {
+    .main-box {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 13%;
+    }
+
+    aside {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .article-1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .article-1 h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .desc {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .button-desc {
+        width: 100%;
+    }
 }
 
 /* Product */
@@ -248,6 +314,58 @@ aside{
     color: #172554;
     border: 1px solid #172554;
 }
+
+/* Product Responsive */
+
+@media (max-width: 768px) {
+    .product-box {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .product-item {
+        width: 40%;
+    }
+}
+
+@media (max-width: 425px) {
+    .product-box {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .product-item {
+        width: 40%;
+    }
+
+    .product-name {
+        font-size: 15px;
+    }
+
+    .product-price {
+        font-size: 12px;
+    }
+
+    .button-product {
+        font-size: 12px;
+    }
+
+    .button-view-more, .button-view-less {
+        font-size: 12px;
+    }
+
+    .judul-product {
+        font-size: 30px;
+    }
+
+    .product-box {
+        padding: 0 5%;
+    }
+}
+
+
 /* About */
 
 .about{
@@ -319,17 +437,153 @@ aside{
     border-radius: 10px 0 0 10px;
 }
 
+/* About Responsive */
+
+@media (max-width: 768px) {
+    .card-about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pengiriman, .keaslian, .testimoni {
+        width: 50%;
+    }
+}
 
 /* Contact */
 
-.article-2{
+.contact{
+    margin-top: 50px;
+    width: 100%;
+    padding: 0 13%;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    box-shadow: 0 0 10px rgba(177, 177, 177, 0.2);
+}
+.contact-h1{
+    margin-top: 100px;
+    font-size: 40px;
+    line-height: 50px;
+    color: #172554;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contact-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.pembuat-web{
     width: 50%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.pembuat-web img{
+    width: 20%;
+}
+
+.pembuat-web p{
+    width: 50%;
+    font-size: 15px;
+    color: #172554;
+    font-weight: 300;
+    margin: 10px 0;
     padding: 0 20px;
 }
 
-footer {
-    position: fixed;
+.list-contact{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.list-contact li{
+    list-style: none;
+    font-size: 15px;
+    color: #172554;
+    font-weight: 300;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+/* Contact Responsive */
+
+@media (max-width: 768px) {
+    .contact-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pembuat-web {
+        width: 100%;
+    }
+
+    .pembuat-web img {
+        width: 30%;
+    }
+
+    .pembuat-web p {
+        width: 100%;
+    }
+
+    .list-contact {
+        width: 100%;
+    }
+
+    .list-contact li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .contact-h1 {
+        font-size: 30px;
+    }
+
+    .pembuat-web img {
+        width: 40%;
+    }
+
+    .pembuat-web p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .list-contact li {
+        width: 100%;
+        font-size: 12px;
+        
+    }
+
+    .list-contact{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        display: flex   ;
+    }
+}
+
+/* Footer */
+
+.footer {
+    position: relative;
     bottom: 0;
     width: 100%;
     height: 40px;
