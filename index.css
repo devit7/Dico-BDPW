@@ -6,7 +6,7 @@ body{
 
 nav{
     width: 100%;
-    padding: 20px 13%;
+    padding: 15px 13%;
     position: fixed;
     top: 0;
     left: 0;
@@ -42,6 +42,27 @@ nav ul li a{
     text-decoration: none;
     color: #1e1b4b;
     transition: 0.3s;
+}
+
+.search{
+    height: 30px;
+    background-color: #f2f2f2;
+    transition: 0.3s;
+    display: flex;
+}
+.search-input{
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    outline: none;
+    background-color: #f2f2f2;
+    font-size: 15px;
+    font-weight: 300;
+    border: 1px solid rgb(175, 175, 175);
+    padding: 0 10px;
+}
+.search-input:focus{
+    background-color: #fff;
 }
 
 /* Navbar Hover:area */
@@ -226,6 +247,76 @@ aside{
     background-color: #fff;
     color: #172554;
     border: 1px solid #172554;
+}
+/* About */
+
+.about{
+    margin-top: 100px;
+    width: 100%;
+    padding: 0 13%;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sub-about{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.judul-about{
+    font-size: 40px;
+    line-height: 50px;
+    color: #172554;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.desc-about{
+    font-size: 18px;
+    color: #172554;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.card-about{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px;
+}
+.pengiriman, .keaslian, .testimoni{
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    width: 30%;
+    padding: 15px;
+    text-align: center;
+}
+.pengiriman h3, .keaslian h3, .testimoni h3{
+    font-size: 20px;
+    color: #172554;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.pengiriman p, .keaslian p, .testimoni p{
+    font-size: 15px;
+    color: #172554;
+    font-weight: 300;
+    margin: 10px 0;
+}
+.pengiriman img, .keaslian img, .testimoni img{
+    width: 50%;
+    border-radius: 10px 0 0 10px;
 }
 
 
