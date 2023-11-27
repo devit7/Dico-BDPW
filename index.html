@@ -10,28 +10,26 @@
     <!-- Header -->
     <header>
       <nav>
-        <ul>
-          <li div="logo"><u>SHOES STORE</u></li>
+        <ul class="logo">
+          <li><u>SHOES STORE</u></li>
         </ul>
-        <ul>
-          <li><a href="#home">Home</a></li>
+        <ul class="menu">
+          <li><a  href="#home">Home</a></li>
           <li><a href="#product">Product</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <ul>
-          <li>
-            <div class="search">
-              <input class="search-input" type="text" placeholder="Search" />
-            </div>
-          </li>
-        </ul>
+        <div class="mobile-menu" onclick="myFunction()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </nav>
     </header>
     <!-- Main -->
     <main id="home">
       <div class="main-box">
-        <article  class="article-1">
+        <article class="article-1">
           <h1 class="judul-desc">
             Toko Sepatu <span>Terbaik</span> di Indonesia
           </h1>
@@ -77,30 +75,36 @@
               src="https://cdn.icon-icons.com/icons2/3404/PNG/512/delivery_icon_215817.png"
               alt=""
             />
-            <h3>Pengiriman</h3>
-            <p>
-              Kita menjaga kualitas produk dengan pengiriman yang cepat dan
-              tepat
-            </p>
+            <div>
+              <h3>Pengiriman</h3>
+              <p>
+                Kita menjaga kualitas produk dengan pengiriman yang cepat dan
+                tepat
+              </p>
+            </div>
           </div>
           <div class="testimoni">
             <img
               src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-sentiment-very-satisfied_89968.png"
               alt=""
             />
-            <h3>Testimoni</h3>
-            <p>
-              Banyak pelanggan yang puas dengan produk yang kami jual, dan
-              memberikan testimoni yang baik
-            </p>
+            <div>
+              <h3>Testimoni</h3>
+              <p>
+                Banyak pelanggan yang puas dengan produk yang kami jual, dan
+                memberikan testimoni yang baik
+              </p>
+            </div>
           </div>
           <div class="keaslian">
             <img
               src="https://cdn.icon-icons.com/icons2/2534/PNG/512/product_valuation_icon_152072.png"
               alt=""
             />
-            <h3>Keaslian</h3>
-            <p>Produk yang kami jual 100% asli, dan kami jamin keasliannya</p>
+            <div>
+              <h3>Keaslian</h3>
+              <p>Produk yang kami jual 100% asli, dan kami jamin keasliannya</p>
+            </div>
           </div>
         </div>
       </article>
@@ -133,6 +137,17 @@
     </footer>
 
     <script>
+      //mobile menu
+      function myFunction() {
+        var x = document.querySelector(".menu");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+
+      //product
       let product = [
         {
           id: 1,

@@ -8,7 +8,7 @@ body{
 
 nav {
     width: 100%;
-    padding: 15px 5%;
+    padding: 15px 13%;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -31,9 +31,9 @@ nav ul li{
     list-style: none;
     padding: 0 15px;
 }
-.logo{
+.logo li{
     color: #1e1b4b;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     transition: 0.3s;
     text-decoration: underline;
@@ -45,26 +45,7 @@ nav ul li a{
     transition: 0.3s;
 }
 
-.search{
-    height: 30px;
-    background-color: #f2f2f2;
-    transition: 0.3s;
-    display: flex;
-}
-.search-input{
-    width: 100%;
-    height: 100%;
-    border-radius: 999px;
-    outline: none;
-    background-color: #f2f2f2;
-    font-size: 15px;
-    font-weight: 300;
-    border: 1px solid rgb(175, 175, 175);
-    padding: 0 10px;
-}
-.search-input:focus{
-    background-color: #fff;
-}
+
 
 /* Navbar Hover:area */
 nav ul li a:hover{
@@ -76,36 +57,66 @@ nav ul li a:hover{
 }
 /* Navbar Responsive */
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-
-    .search {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .search-input {
-        width: 100%;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-}
-
-/* Navbar Responsive Mobile */
-
-@media (max-width: 425px) {
+@media only screen and (max-width: 768px) {
     nav {
         padding: 15px 5%;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
-    .logo {
-        font-size: 15px;
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        position: absolute;
+        top: 70px; /* Adjust as needed based on your design */
+        left: 0;
+        z-index: 99;
+    }
+
+    .menu a {
+        padding: 15px;
+        display: block;
+    }
+
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        order: 2;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #1e1b4b;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    .menu-active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    nav ul li a:hover {
+        background-color: transparent;
+        color: #1e1b4b;
+        border-radius: 0;
+        padding: 0;
     }
 }
+
 
 /* body main */
 main{
@@ -406,9 +417,7 @@ aside{
 .card-about{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+    justify-content: center ;
     margin: 10px;
 }
 .pengiriman, .keaslian, .testimoni{
@@ -416,9 +425,14 @@ aside{
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     border-radius: 10px;
-    width: 30%;
-    padding: 15px;
+    width: 25%;
+    margin: 10px;
+    padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 .pengiriman h3, .keaslian h3, .testimoni h3{
     font-size: 20px;
@@ -433,7 +447,7 @@ aside{
     margin: 10px 0;
 }
 .pengiriman img, .keaslian img, .testimoni img{
-    width: 50%;
+    width: 30%;
     border-radius: 10px 0 0 10px;
 }
 
@@ -449,6 +463,7 @@ aside{
         width: 50%;
     }
 }
+
 
 /* Contact */
 
